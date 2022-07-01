@@ -1,0 +1,10 @@
+<div class="page">
+  <div class="plane_panel" *ngFor="let plane of airplanePositions">
+    <p>
+      {{ plane.airplane_id }}: {{ formatLatLong(plane.latitude_deg) }}N,
+      {{ formatLatLong(plane.longitude_deg) }}W.
+      Airspeed={{ plane.speed_kph | number: '1.1-1' }}kph,
+      Altitude={{ plane.altitude_m | number: '1.1-2' }}m
+    </p>
+  </div>
+</div>
